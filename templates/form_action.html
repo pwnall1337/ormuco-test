@@ -1,0 +1,21 @@
+ <html>
+    <head>
+        <title>Data recorded</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Data recored for future use.</h1>
+            </div>
+            <div id="content">
+                Hello <strong>{{name}}</strong> with favorite color: {{color}}!<br><br>
+                Thanks for telling us your favorite animal was {{catdog}}.<br><br>
+                We recored your input and stored it to our ormuco sqlite3 database.
+                <br>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
+

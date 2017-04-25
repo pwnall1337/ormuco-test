@@ -1,0 +1,28 @@
+#ansible-playbook setup.yaml
+
+- name: Install Ormuco App
+  hosts: all
+  tasks:
+    - name: Install req packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - python-pip
+        - sqlite3
+        - git
+
+    - name: Install Flask
+      pip:
+        name: flask
+        state: present
+
+    - name: Init Ormuco DB
+      shell: python init_db.py
+
+    - name: Start App on port 5000
+      shell: python app.py &>/dev/null &
+      
+    
+     
+

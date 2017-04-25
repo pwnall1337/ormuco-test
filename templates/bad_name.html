@@ -1,0 +1,21 @@
+ <html>
+    <head>
+        <title>Error!</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Name already in use!</h1>
+            </div>
+            <div id="content">
+                Hello <strong>{{name}}</strong><br>
+                We apologize for the inconvenience, however this name is alrady taken.<br>
+                Please press back and use a different name if you want to take this survey.<br>
+                <br>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
+

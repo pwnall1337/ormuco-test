@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Ormuco People Survey App</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Please enter your data below and hit submit.</h1>
+            </div>
+            <div id="content">
+                <form method="post" action="{{ url_for('done') }}">
+                  <label for="name">Please enter your name:</label>
+                  <input type="text" name="name" /><br />
+                  <label for="color">Please enter your favorite color:</label>
+                  <input type="text" name="color" /><br />
+                  <select name="catdog">
+                  <option name="cat">cat</option>
+                  <option name="dog">dog</option>
+                  </select><br></br>
+                  <input type="submit" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+ 
